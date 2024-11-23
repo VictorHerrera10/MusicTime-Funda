@@ -1,0 +1,88 @@
+<div class="container pb-5" *ngIf="musical">
+    <div class="p-3 mt-3 shadow-sm">
+        <img
+            style="height: 400px;"
+            [src]="musical.photo && 'data:image/jpg;base64,' + musical.photo|| 'https://objetivoligar.com/wp-content/uploads/2017/03/blank-profile-picture-973460_1280-768x768.jpg'"
+            alt="img">
+        <div class="mt-3">
+            <div><span class="fw-bold">Name:
+                </span><span>{{musical.musicalName}}</span></div>
+            <div class="mt-1"><span class="fw-bold">Manager:
+                </span><span>{{musical.managerFirstName}}
+                    {{musical.managerLastName}}</span></div>
+            <div class="mt-1"><span class="fw-bold">Genre:
+                </span><span>Cumbia</span></div>
+            <div class="mt-1"><span class="fw-bold">Description:
+                </span><span>{{musical.description}}</span></div>
+            <div class="mt-2"><span class="fw-bold">Members: </span>
+                <ul *ngIf="musical.members">
+                    <li
+                        *ngFor="let item of musical.members.split(',')||[]">{{item}}
+                    </li>
+                </ul>
+            </div>
+            <div class="mt-1"><span class="fw-bold">Type of contract:
+                </span><span>{{musical.typeContract}}</span></div>
+            <div class="mt-1"><span class="fw-bold">Contactos: </span>
+                <ul>
+                    <li>{{musical.phone}}</li>
+                </ul>
+            </div>
+            <div class="text-end">
+                <button mat-raised-button class="me-2" routerLink="/home">Back
+                    to top</button>
+                <button mat-raised-button color="primary"
+                    routerLink="/contract-create/{{musical.id}}">Hire</button>
+            </div>
+        </div>
+    </div>
+    <form [formGroup]="myForm">
+        <div class="mt-3 d-flex align-items-center">
+            <mat-form-field class="w-100 me-3">
+                <mat-label>Your comment</mat-label>
+                <textarea matInput formControlName="description"></textarea>
+            </mat-form-field>
+            <button (click)="addComment()" mat-raised-button>Enviar</button>
+        </div>
+    </form>
+    <div>
+        <span>Puntuación:</span>
+        <div>
+            <mat-icon style="cursor: pointer;"
+                color="{{points>=1?'warn':''}}"
+                (click)="givePoint(1)">star</mat-icon>
+            <mat-icon style="cursor: pointer;"
+                color="{{points>=2?'warn':''}}"
+                (click)="givePoint(2)">star</mat-icon>
+            <mat-icon style="cursor: pointer;"
+                color="{{points>=3?'warn':''}}"
+                (click)="givePoint(3)">star</mat-icon>
+            <mat-icon style="cursor: pointer;"
+                color="{{points>=4?'warn':''}}"
+                (click)="givePoint(4)">star</mat-icon>
+            <mat-icon style="cursor: pointer;"
+                color="{{points>=5?'warn':''}}"
+                (click)="givePoint(5)">star</mat-icon>
+        </div>
+    </div>
+    <h2 class="mt-4">Comentarios</h2>
+    <div class="shadow-sm p-2 mt-2" *ngFor="let item of comments">
+        <div class="d-flex">
+            <img
+                style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;"
+                [src]="item && item.author && item.author.photo ? 'data:image/jpg;base64,' + item.author.photo : 'https://www.seoptimer.com/storage/images/2014/08/selfie.jpg'"
+                alt="foto">
+
+            <div class="ms-3">
+                <span style="font-weight: bold;">{{item.author.firstName}}
+                    {{item.author.lastName}}</span> <br>
+                <span>{{item.createdAt | date:'dd-MM-yyyy'}}</span>
+            </div>
+        </div>
+        <p class="ps-5 mt-2">{{item.description}}</p>
+    </div>
+    <div>
+        <h3 class="text-center" *ngIf="comments.length==0">Write the first
+            comment</h3>
+    </div>
+</div>

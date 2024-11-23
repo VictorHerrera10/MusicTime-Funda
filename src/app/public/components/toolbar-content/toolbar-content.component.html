@@ -1,0 +1,57 @@
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
+
+  <div class="container-fluid">
+    <a class="navbar-brand ms-3" href="#">
+      <img src="../../../../assets/logo.png" alt="logo" class="logo">
+    </a>
+    <div class="musical-note note-1">♪</div>
+    <div class="musical-note note-2">♫</div>
+    <div class="musical-note note-3">♬</div>
+    <div class="musical-note note-4">♩</div>
+    <div class="musical-note note-5">♭</div>
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/home">
+            <span class="material-icons">home</span> Home
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="!user || user && (user.userType=='0'||user.userType=='1')">
+          <a class="nav-link active" routerLink="/suscription">
+            <span class="material-icons">queue_music</span> Suscription
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="user && user.userType!='0'">
+          <a class="nav-link active" routerLink="contract-view">
+            <span class="material-icons">event_note</span> Contract
+          </a>
+        </li>
+        <li class="nav-item" *ngIf="!user">
+          <button class="btn btn-primary ms-3" routerLink="login">
+            <span class="material-icons">login</span> Login
+          </button>
+        </li>
+        <li class="nav-item" *ngIf="!user">
+          <button class="btn btn-success ms-2" routerLink="register">
+            <span class="material-icons">person_add</span> Sign Up
+          </button>
+        </li>
+        <li class="nav-item" *ngIf="user">
+          <button class="btn btn-warning ms-2" (click)="getProfile()">
+            <span class="material-icons">person</span> Profile
+          </button>
+        </li>
+        <li class="nav-item" *ngIf="user">
+          <button class="btn btn-danger ms-2" (click)="logOut()">
+            <span class="material-icons">logout</span> Log Out
+          </button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

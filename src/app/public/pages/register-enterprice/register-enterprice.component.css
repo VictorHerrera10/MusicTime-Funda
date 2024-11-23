@@ -1,0 +1,82 @@
+/* Contenedor principal */
+.container {
+  background-color: #1A1A2E; /* Fondo oscuro elegante */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF; /* Texto blanco */
+}
+
+/* Títulos */
+h1 {
+  color: #FFD700; /* Título en dorado */
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  color: #CCCCCC; /* Texto gris claro */
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* Campos del formulario */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: rgba(206, 212, 255, 0.15); /* Fondo translúcido */
+  border-radius: 5px;
+}
+
+mat-form-field .mat-form-field-label {
+  color: #CCCCCC !important; /* Etiquetas en gris claro */
+}
+
+mat-form-field.mat-focused .mat-form-field-label {
+  color: #FFD700 !important; /* Etiqueta dorada al enfocar */
+}
+
+mat-form-field input {
+  color: #FFFFFF; /* Texto blanco */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #6C63FF; /* Borde morado */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline:hover {
+  border-color: #4A4CD1; /* Morado más oscuro */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  border-color: #FFD700; /* Borde dorado activo */
+}
+
+/* Botones */
+button[mat-raised-button] {
+  background-color: #6C63FF; /* Morado intenso */
+  color: #FFFFFF; /* Texto blanco */
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #4A4CD1; /* Morado más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  button[mat-raised-button] {
+    width: 100%; /* Botón responsivo */
+  }
+}

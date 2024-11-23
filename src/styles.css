@@ -1,0 +1,50 @@
+/* Fondo global */
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #0d0d29; /* Fondo negro */
+  color: #fff; /* Texto blanco */
+}
+
+html, body {
+  height: 100%;
+}
+
+/* Títulos destacados */
+h1, h2, h3 {
+  color: #FFD700; /* Dorado */
+}
+
+/* Enlaces */
+a {
+  color: #6C63FF; /* Morado intenso */
+  text-decoration: none;
+}
+
+a:hover {
+  color: #FF6F61; /* Rojo suave */
+}
+
+/* Botones */
+button {
+  background-color: #6C63FF; /* Morado intenso */
+  color: #fff; /* Texto blanco */
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #4A4CD1; /* Morado oscuro */
+}
+
+button.primary {
+  background-color: #FFD700; /* Dorado */
+}
+
+button.primary:hover {
+  background-color: #FFC107; /* Amarillo vibrante */
+}

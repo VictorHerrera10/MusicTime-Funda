@@ -1,0 +1,154 @@
+<div class="container">
+    <h1 class="mt-3">Contract creation</h1>
+    <p>Fill out all the information that will be used to create and send the
+        contract to the musician.</p>
+    <br>
+    <br>
+    <h2 class="text-center">CONTRATO PARA PRESENTACION MUSICAL</h2>
+    <form [formGroup]="myForm">
+        <div class="card">
+            <div class="card-header">
+                Partes del contrato
+            </div>
+            <div class="card-body"
+                style="display: grid; grid-template-columns: 1fr 1fr;">
+                <div *ngIf="customer">
+                    <span>Cliente:</span>
+                    <ul class="mt-2">
+                        <li>Nombre: {{customer.firstName}} </li>
+                        <li>Apellidos: {{customer.lastName}} </li>
+                        <li>Telefono:{{customer.phone}}</li>
+                    </ul>
+                </div>
+                <div>
+                    <span>Artista Musical:</span>
+                    <ul class="mt-2">
+                        <li>Nombre del representante:
+                            {{musical.managerFirstName}} </li>
+                        <li>Apellidos del representante:
+                            {{musical.managerLastName}} </li>
+                        <li>Telefono del representante: {{musical.phone}}</li>
+                        <li>Nombre del artista: {{musical.musicalName}}</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <h1 class="mt-4">Evento a participar:</h1>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Presentation Adress</mat-label>
+                    <input matInput placeholder="Av.."
+                        formControlName="address">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Amount</mat-label>
+                    <input matInput placeholder="S/." formControlName="amount">
+                </mat-form-field>
+                <div class="d-flex">
+                    <mat-form-field class="w-75">
+                        <mat-label>Event Date</mat-label>
+                        <input matInput [matDatepicker]="picker"
+                            formControlName="initialDate">
+                        <mat-datepicker-toggle matIconSuffix
+                            [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="w-25 ms-2">
+                        <mat-label>Hours</mat-label>
+                        <input matInput placeholder formControlName="hours">
+                    </mat-form-field>
+                </div>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Event Reason</mat-label>
+                    <input matInput placeholder formControlName="reason">
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Type of contract</mat-label>
+                    <mat-select formControlName="typeContract">
+                        <mat-option value="Hours">Hours</mat-option>
+                        <mat-option
+                            value="Presentation">Presentation</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <h3 class="fw-bold">DECLARACIONES</h3>
+        <p>I. Victor Raul, en lo sucesivo denominado "El Cliente", declara que
+            es
+            una persona física con capacidad legal para contratar y obligarse en
+            términos de este contrato.</p>
+        <p>II. Juan Diego, en lo sucesivo denominada "El artista musical",
+            declara
+            que es una persona física con capacidad legal para recibir contratos
+            y
+            obligarse en términos de este contrato.</p>
+        <h3 class="fw-bold">OBJETO DEL CONTRATO</h3>
+        <p>III. El Cliente contrata los servicios del Artista musical para la
+            realización de los siguientes trabajos: Presentacion para evento
+            musical.</p>
+        <h3 class="fw-bold">PLAZOS Y TÉRMINOS</h3>
+        <p>IV. El presente contrato tendrá una vigencia de 1 mes, iniciando el
+            dia
+            de envio del contrato y terminando el dia despues de cumplir un mes
+            (30
+            dias habiles) luego del inicio.</p>
+        <p>V. El artista musical se compromete a presentarse al evento conforme
+            a la
+            fecha y hora del evento.</p>
+        <h3 class="fw-bold">COMPENSACIÓN Y PAGOS</h3>
+        <p>VI. El Cliente pagará al artista musical, la cantidad total del monto
+            colocado anteriormente para el contrato, que se realizará de la
+            siguiente manera:</p>
+        <ul>
+            <li>50% al inicio del contrato.</li>
+            <li>50% al finalizar y entregar los servicios acordados.</li>
+        </ul>
+        <h3 class="fw-bold">DERECHOS Y OBLIGACIONES</h3>
+        <p>VII. El Artista musical se compromete a prestar los servicios con la
+            mayor diligencia y profesionalidad, cumpliendo con las
+            especificaciones
+            y requerimientos del Cliente.</p>
+        <p>VIII. El Cliente se compromete a proporcionar toda la información y
+            recursos necesarios para que el Artista pueda realizar su
+            trabajo.</p>
+        <h3 class="fw-bold">CONFIDENCIALIDAD</h3>
+        <p>IX. Ambas partes acuerdan mantener la confidencialidad de toda la
+            información y documentación a la que tengan acceso en virtud de este
+            contrato, tanto durante su vigencia como después de su
+            terminación.</p>
+        <h3 class="fw-bold">RESOLUCIÓN DE DISPUTAS</h3>
+        <p>X. En caso de controversias o disputas derivadas de este contrato,
+            las
+            partes se comprometen a resolverlas de manera amistosa. Si no es
+            posible, se someterán a mediación o arbitraje conforme a las leyes
+            aplicables establecidas por el gobierno peruano.</p>
+        <h3 class="fw-bold">TERMINACIÓN DEL CONTRATO</h3>
+        <p>XI. Este contrato podrá ser terminado anticipadamente por cualquiera
+            de
+            las partes mediante notificación escrita con 7 dias de
+            antelación.</p>
+        <p>XII. En caso de incumplimiento de alguna de las partes, la parte
+            afectada
+            podrá dar por terminado el contrato de forma inmediata, previa
+            notificación por escrito.</p>
+        <p class="mt-4"><span>Nota: </span><span class="fw-light"> Para validez
+                legal se solicita
+                la firma de ambas partes frente al documento generado por la
+                plataforma MusicTime.</span></p>
+        <p></p>
+        <br>
+        <div class="text-center">
+            <button [disabled]="myForm.invalid" mat-raised-button
+                color="primary" (click)="create()">Send
+                contract</button>
+        </div>
+    </form>
+    <br>
+    <br>
+</div>

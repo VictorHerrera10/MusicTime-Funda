@@ -1,0 +1,125 @@
+/* Contenedor principal */
+.container {
+  background-color: #1A1A2E; /* Fondo oscuro elegante */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF; /* Texto blanco */
+}
+
+/* Títulos principales */
+h1, h2 {
+  color: #FFD700; /* Títulos en dorado */
+  font-weight: bold;
+  text-align: center;
+}
+
+/* Subtítulos y textos secundarios */
+p, ul li {
+  color: #CCCCCC; /* Texto gris claro */
+  font-size: 1rem;
+}
+
+/* Tarjetas (Card) */
+.card {
+  background-color: #222437; /* Fondo oscuro para tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  background-color: #6C63FF; /* Fondo morado */
+  color: #FFFFFF; /* Texto blanco */
+  font-weight: bold;
+  border-radius: 10px 10px 0 0;
+  padding: 10px;
+  text-align: center;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Campos del formulario */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.85); /* Fondo translúcido */
+  border-radius: 5px;
+}
+
+mat-form-field .mat-form-field-label {
+  color: #CCCCCC !important; /* Etiquetas en gris claro */
+}
+
+mat-form-field.mat-focused .mat-form-field-label {
+  color: #FFD700 !important; /* Etiqueta dorada al enfocar */
+}
+
+mat-form-field input, mat-form-field textarea {
+  color: #FFFFFF; /* Texto blanco */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #6C63FF; /* Borde morado */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline:hover {
+  border-color: #4A4CD1; /* Morado más oscuro */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  border-color: #FFD700; /* Borde dorado activo */
+}
+
+/* Botones */
+button[mat-raised-button] {
+  background-color: #6C63FF; /* Morado intenso */
+  color: #FFFFFF; /* Texto blanco */
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #4A4CD1; /* Morado más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Listas */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 5px 0;
+  padding: 5px;
+  border-radius: 5px;
+  background: #2E2E4E; /* Fondo oscuro claro */
+  color: #FFFFFF; /* Texto blanco */
+}
+
+ul li:hover {
+  background: #6C63FF; /* Morado */
+  color: #FFFFFF;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .card-body {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+
+  button[mat-raised-button] {
+    width: 100%; /* Botón responsivo */
+  }
+}

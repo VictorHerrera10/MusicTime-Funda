@@ -1,0 +1,177 @@
+/* Barra de navegación */
+.custom-navbar {
+  background: linear-gradient(90deg, rgba(29, 53, 87, 0.16), rgba(108, 99, 255, 0.15), rgba(110, 0, 0, 0.11));
+  padding: 15px 20px;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  border-bottom: 4px solid #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden; /* Oculta las notas fuera de los bordes */
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+  animation: colorChange 5s linear infinite;
+  transition: transform 0.3s ease;
+}
+
+
+/* Definición de la animación de rotación */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes colorChange {
+  0% {
+    filter: hue-rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(180deg);
+    transform: rotate(180deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes floatNote {
+  0% {
+    left: -10%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1; /* Las notas aparecen gradualmente */
+  }
+  90% {
+    opacity: 1; /* Permanecen visibles durante el movimiento */
+  }
+  100% {
+    left: 110%; /* Salen por la derecha */
+    opacity: 0; /* Se desvanecen */
+  }
+}
+
+
+/* Enlaces de navegación */
+.nav-link {
+  color: #f1f1f1 !important;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: rgb(245, 230, 135) !important;
+  transform: scale(1.1);
+}
+
+/* Botones con colores vivos */
+.btn {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background: rgba(16, 39, 110, 0.83);
+  border: none;
+}
+
+.btn-success {
+  background: rgba(23, 102, 27, 0.7);
+  border: none;
+}
+
+.btn-warning {
+  background: rgba(255, 152, 0, 0.36);
+  border: none;
+}
+
+.btn-danger {
+  background: rgba(244, 67, 54, 0.41);
+  border: none;
+}
+
+.btn:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Animación del menú hamburguesa */
+.custom-toggler {
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  transition: background 0.3s ease;
+}
+
+.custom-toggler:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.custom-navbar .musical-note {
+  font-size: 24px;
+  font-weight: bold;
+  color: rgba(0, 16, 67, 0.91);
+  top: 10%;
+  animation: floatNote 5s linear infinite;
+  opacity: 0; /* Las notas comienzan invisibles */
+}
+
+/* Animaciones individuales para las notas */
+.custom-navbar .note-1 {
+  animation-delay: 2s;
+  position: absolute;
+  color: #FFD700; /* Dorado */
+}
+
+.custom-navbar .note-2 {
+  animation-delay: 4s;
+  position: relative;
+  color: #C0C0C0; /* Plateado */
+}
+
+.custom-navbar .note-3 {
+  animation-delay: 6s;
+  position: absolute;
+  color: #6C63FF; /* Morado intenso */
+}
+
+.custom-navbar .note-4 {
+  animation-delay: 8s;
+  position: relative;
+  color: #FF6F61; /* Naranja suave */
+}
+
+.custom-navbar .note-5 {
+  animation-delay: 10s;
+  position: absolute;
+  color: #1D3557; /* Azul medianoche */
+}
+
+
+.material-icons {
+  font-size: 20px;
+  vertical-align: middle;
+}
+
+/* Transiciones suaves */
+.navbar-collapse {
+  transition: all 0.3s ease-in-out;
+}

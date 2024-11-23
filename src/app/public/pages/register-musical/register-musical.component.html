@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1 class="text-center mt-5 ">Ready to get on more stages?</h1>
+            <p class="text-center">Complete the information to continue with
+                your subscription.</p>
+            <form [formGroup]="myForm">
+                <mat-form-field appearance="outline" class="w-100 mt-2">
+                    <mat-label>Musical name</mat-label>
+                    <input matInput placeholder formControlName="musicalName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Descripcion</mat-label>
+                    <input matInput placeholder
+                        formControlName="description">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Group or soloist</mat-label>
+                    <input matInput placeholder formControlName="soloist">
+                </mat-form-field>
+                <button mat-raised-button class="w-100 mt-3"
+                    (click)="crear()"
+                    color="primary">Send
+                    information</button>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

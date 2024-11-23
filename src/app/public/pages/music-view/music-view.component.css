@@ -1,0 +1,104 @@
+/* Contenedor principal */
+.container {
+  background-color: rgba(255, 255, 255, 0.72); /* Fondo oscuro elegante */
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+  color: #e7e7e7; /* Texto gris claro */
+}
+
+/* Títulos y textos */
+h1 {
+  color: #FFD700; /* Título dorado */
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  color: #CCCCCC; /* Texto gris claro */
+  text-align: center;
+  font-size: 1rem;
+}
+/* Campos del formulario */
+mat-form-field{
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+
+
+mat-form-field .mat-form-field-label {
+  color: #CCCCCC !important; /* Texto gris claro */
+}
+
+mat-form-field.mat-focused .mat-form-field-label {
+  color: #FFD700 !important; /* Etiqueta dorada al enfocar */
+}
+
+mat-form-field input, mat-form-field textarea {
+  color: #e22121; /* Texto gris claro */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #6C63FF; /* Borde morado */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline:hover {
+  border-color: #4A4CD1; /* Morado más oscuro */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  border-color: #FFD700; /* Borde dorado activo */
+}
+
+/* Botones */
+button[mat-raised-button] {
+  background-color: #6C63FF; /* Morado intenso */
+  color: #CCCCCC; /* Texto gris claro */
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #4A4CD1; /* Morado más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Imagen de perfil */
+#img-perfil {
+  border-radius: 50%;
+  border: 3px solid #FFD700; /* Borde dorado */
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Contenedor del formulario */
+.row {
+  margin-bottom: 20px;
+}
+
+/* Texto de descripción */
+textarea {
+  background: rgb(255, 255, 255); /* Fondo oscuro */
+  color: #000000; /* Texto gris claro */
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  #img-perfil {
+    width: 120px;
+    height: 120px;
+  }
+}

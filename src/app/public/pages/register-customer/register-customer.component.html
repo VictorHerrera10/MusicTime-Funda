@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h1 class="text-center mt-5">Ready to start?</h1>
+            <p class="text-center">Complete the remaining information to have
+                your account.</p>
+            <form [formGroup]="myForm">
+                <mat-form-field appearance="outline" class="w-100 mt-2">
+                    <mat-label>Names</mat-label>
+                    <input matInput placeholder formControlName="firstName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Surnames</mat-label>
+                    <input matInput placeholder
+                        formControlName="lastName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Phone Number</mat-label>
+                    <input matInput placeholder formControlName="phone">
+                </mat-form-field>
+                <button (click)="create()" [disabled]="myForm.invalid"
+                    mat-raised-button class="w-100 mt-3"
+                    color="primary">Crete
+                    account</button>
+            </form>
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+</div>

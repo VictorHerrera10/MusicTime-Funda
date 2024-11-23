@@ -1,0 +1,29 @@
+<div class="content-login">
+  <!-- Columna del formulario -->
+  <div class="container ps-5 pt-5">
+    <div class="text-center">
+      <img style="width: 70px; height: 60px;" src="assets/logo2.png" alt="logo">
+    </div>
+    <h2 class="text-center mt-3">Create an account</h2>
+    <p class="text-center">Enter your email and password</p>
+    <form [formGroup]="myForm">
+      <mat-form-field appearance="outline" class="w-100 mt-2">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput placeholder="email@domain.com" formControlName="email">
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="w-100 mt-2">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput placeholder="your password" formControlName="password">
+      </mat-form-field>
+      <button [disabled]="myForm.invalid" (click)="create()" mat-raised-button class="w-100" color="primary">
+        Sign up
+      </button>
+    </form>
+    <p class="mt-3 text-center">By clicking continue, you agree to our Terms of Service and Privacy Policy</p>
+  </div>
+
+  <!-- Columna con imagen de fondo -->
+  <div style="height: calc(100vh - 70px);" class="ps-5">
+    <img style="object-fit: cover; height: 100%;" src="assets/fondo2.png" alt="background">
+  </div>
+</div>

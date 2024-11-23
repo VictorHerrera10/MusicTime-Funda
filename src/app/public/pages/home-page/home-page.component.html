@@ -1,0 +1,62 @@
+<div class="content">
+  <div class="header">
+    <p class="fw-bold title">MusicTime</p>
+    <mat-form-field appearance="outline" class="search-bar">
+      <mat-label>Search</mat-label>
+      <input matInput placeholder="Grupo.." (keyup)="applyFilter($event)">
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+  </div>
+  <div class="container-fluid">
+    <div class="row">
+      <h1 class="text-center mt-5" *ngIf="filter.length==0">No se han encontrado datos</h1>
+      <h1 *ngIf="!musicals" class="text-center mt-5">No hay datos</h1>
+      <div class="col-md-6 p-2 mt-3" *ngFor="let item of filter">
+        <div class="shadow-sm p-3">
+          <img
+            class="img-item"
+            [src]="item.photo ? 'data:image/jpg;base64,' + item.photo : 'https://objetivoligar.com/wp-content/uploads/2017/03/blank-profile-picture-973460_1280-768x768.jpg'"
+            alt="music">
+          <div>
+            <div class="mt-1">
+              <span class="fw-bold">Name:</span>
+              <span>{{item.musicalName}}</span>
+            </div>
+            <div class="mt-1">
+              <span class="fw-bold">Manager:</span>
+              <span>{{item.managerFirstName}} {{item.managerLastName}}</span>
+            </div>
+            <div class="mt-1">
+              <span class="fw-bold">Genre:</span>
+              <span>{{item.genre}}</span>
+            </div>
+            <div class="mt-1">
+              <span class="fw-bold">Description:</span>
+              <span>{{item.description}}</span>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <div class="d-flex align-items-center">
+                <span class="fw-bold">Qualification: </span>
+                <div>
+                  <mat-icon>star</mat-icon>
+                  <mat-icon>star</mat-icon>
+                  <mat-icon>star</mat-icon>
+                  <mat-icon>star</mat-icon>
+                  <mat-icon>star</mat-icon>
+                </div>
+              </div>
+              <div>
+                <button routerLink="/profile/{{item.id}}" class="ms-2" mat-raised-button>
+                  View profile
+                </button>
+                <button routerLink="/contract-create/{{item.id}}" class="ms-2" mat-raised-button color="primary">
+                  Hire
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

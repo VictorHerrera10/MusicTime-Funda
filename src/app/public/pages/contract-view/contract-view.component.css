@@ -1,0 +1,99 @@
+/* Contenedor principal */
+.container {
+  background-color: #1A1A2E; /* Fondo oscuro */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(107, 107, 107, 0.5);
+}
+
+/* Título */
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #FFD700; /* Dorado para profesionalismo */
+  margin-bottom: 20px;
+}
+
+/* Campo de búsqueda */
+mat-form-field {
+  background-color: #222437; /* Fondo ligeramente más claro */
+  color: #FFFFFF;
+  border-radius: 8px;
+  padding: 5px 10px;
+  margin-bottom: 20px;
+}
+
+mat-form-field input {
+  color: #FFFFFF; /* Texto blanco */
+}
+
+mat-form-field mat-icon {
+  color: #FFD700; /* Dorado para iconos */
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  background-color: #2E2E4E; /* Fondo para la tabla */
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+th {
+  background-color: #1D1D35; /* Encabezados de tabla más oscuros */
+  color: #FFD700; /* Texto en dorado */
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  border-bottom: 2px solid #FFD700;
+}
+
+td {
+  color: #FFFFFF; /* Texto blanco */
+  padding: 10px;
+  border-bottom: 1px solid #444466;
+}
+
+td button {
+  background-color: #6C63FF; /* Botón morado */
+  color: #FFFFFF; /* Texto blanco */
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+td button:hover {
+  background-color: #4A4CD1; /* Morado más oscuro */
+  transform: scale(1.05);
+}
+
+/* Paginador */
+mat-paginator {
+  background-color: #1D1D35; /* Fondo oscuro */
+  color: #FFFFFF; /* Texto blanco */
+  border-top: 2px solid #FFD700; /* Línea dorada superior */
+}
+
+.mat-paginator-range-label,
+.mat-paginator-page-size {
+  color: #FFFFFF; /* Texto blanco */
+}
+
+.mat-paginator-icon {
+  color: #FFD700 !important; /* Color dorado */
+}
+.mat-paginator-icon:hover {
+  color: #FFC107 !important; /* Amarillo vibrante */
+  transform: scale(1.1); /* Efecto de aumento */
+  transition: all 0.3s ease;
+}
+
+.mat-paginator-page-size-options {
+  background-color: #222437; /* Fondo oscuro para el menú desplegable */
+  color: #FFFFFF; /* Texto blanco */
+}

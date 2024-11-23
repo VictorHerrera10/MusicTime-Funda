@@ -1,0 +1,120 @@
+/* Contenedor principal */
+.content-login {
+  display: grid;
+  grid-template-columns: 70% 30%; /* Ajuste del tamaño de columnas */
+  height: 100vh;
+  background-color: #1A1A2E; /* Fondo oscuro elegante */
+}
+
+/* Imagen de fondo */
+.content-login img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgb(255, 255, 255);
+}
+
+/* Contenedor del formulario */
+.container {
+  background-color: #222437; /* Fondo oscuro para el formulario */
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgb(255, 255, 255);
+  color: #FFFFFF; /* Texto blanco */
+}
+
+/* Logo */
+.container .text-center img {
+  border-radius: 50%;
+  border: 2px solid #FFD700; /* Borde dorado */
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Título */
+h2 {
+  color: #FFD700; /* Título en dorado */
+  font-weight: bold;
+  text-align: center;
+}
+
+p {
+  color: #FFFFFF; /* Texto blanco */
+  text-align: center;
+}
+
+/* Campos del formulario */
+mat-form-field {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: rgba(206, 212, 255, 0.24); /* Fondo oscuro */
+  border-radius: 5px;
+}
+mat-form-field .mat-form-field-label {
+  color: #FFFFFF !important; /* Blanco */
+}
+/* Opcional: Mantener el color blanco cuando el campo está activo */
+mat-form-field.mat-focused .mat-form-field-label {
+  color: #FFFFFF !important; /* Blanco cuando el campo está enfocado */
+}
+mat-form-field input {
+  color: #FFFFFF; /* Texto blanco */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #FFD700; /* Borde dorado */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline:hover {
+  border-color: #FFC107; /* Amarillo vibrante */
+}
+
+mat-form-field.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  border-color: #FFD700; /* Borde dorado activo */
+}
+
+/* Botón de inicio de sesión */
+button[mat-raised-button] {
+  background-color: rgba(108, 99, 255, 0.41); /* Morado intenso */
+  color: #FFFFFF; /* Texto blanco */
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+button[mat-raised-button]:hover {
+  background-color: #4A4CD1; /* Morado más oscuro */
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* Texto de términos */
+.container p {
+  font-size: 0.85rem;
+  color: #AAAAAA; /* Texto gris claro */
+}
+
+/* Respuesta responsiva */
+@media (max-width: 768px) {
+  .content-login {
+    grid-template-columns: 1fr;
+  }
+
+  .content-login img {
+    display: none; /* Oculta la imagen de fondo en pantallas pequeñas */
+  }
+
+  .container {
+    padding: 20px;
+    margin: auto;
+
+    width: 90%;
+  }
+}
+/* Logo con cambio de color */
+#logo:hover {
+  filter: hue-rotate(180deg); /* Cambia el tono al pasar el mouse */
+}

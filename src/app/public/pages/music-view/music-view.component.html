@@ -1,0 +1,106 @@
+<div class="container">
+    <h1 class="mt-3 fw-bold">Musical profile modification.</h1>
+    <p>Here you can modify the musical information for your contracts.</p>
+    <form [formGroup]="myForm">
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-4">
+                <br>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Musical name</mat-label>
+                    <input matInput placeholder="email@domain.com"
+                        formControlName="musicalName">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                <mat-label>Manager Names</mat-label>
+                <input matInput placeholder="email@domain.com"
+                       formControlName="managerFirstName">
+
+                <mat-label>Manager Surnames</mat-label>
+                <input matInput placeholder="email@domain.com"
+                       formControlName="managerLastName">
+              </mat-form-field>
+              <mat-form-field class="w-100">
+                    <mat-label>Music Genre</mat-label>
+                    <mat-select formControlName="genre">
+                        <mat-option value="Rock">Rock</mat-option>
+                        <mat-option value="Pop">Pop</mat-option>
+                        <mat-option value="Jazz">Jazz</mat-option>
+                        <mat-option value="Classical">Classical</mat-option>
+                        <mat-option value="Hip-hop">Hip-hop</mat-option>
+                        <mat-option value="Electronic">Electronic</mat-option>
+                        <mat-option value="Country">Country</mat-option>
+                        <mat-option value="Reggae">Reggae</mat-option>
+                        <mat-option value="Blues">Blues</mat-option>
+                        <mat-option value="Latin">Latin</mat-option>
+                        <mat-option value="R&B">R&B</mat-option>
+                        <mat-option value="Metal">Metal</mat-option>
+                        <mat-option value="Funk">Funk</mat-option>
+                        <mat-option value="Soul">Soul</mat-option>
+                        <mat-option value="Punk">Punk</mat-option>
+                        <mat-option value="Folk">Folk</mat-option>
+                        <mat-option value="Disco">Disco</mat-option>
+                        <mat-option value="House">House</mat-option>
+                        <mat-option value="Techno">Techno</mat-option>
+                        <mat-option value="Gospel">Gospel</mat-option>
+                        <mat-option value="Salsa">Salsa</mat-option>
+                        <mat-option value="Cumbia">Cumbia</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Type of contract</mat-label>
+                    <mat-select formControlName="typeContract">
+                        <mat-option value="Hours">Hours</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Phone number</mat-label>
+                    <input matInput placeholder="email@domain.com"
+                        formControlName="phone">
+                </mat-form-field>
+                <mat-form-field class="w-100">
+                    <mat-label>Members</mat-label>
+                    <textarea matInput formControlName="members"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <img id="img-perfil"
+                        [src]="photo || 'https://objetivoligar.com/wp-content/uploads/2017/03/blank-profile-picture-973460_1280-768x768.jpg'"
+                        style="width: 155px;height: 155px;" alt="profile">
+                </div>
+                <div class="text-center mt-2">
+                    <button mat-raised-button>
+                        <input type="file" mat-raised-button
+                            (change)="onChangedFile($event)" />
+                    </button>
+                </div>
+                <mat-form-field appearance="outline" class="w-100 mt-4">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="email@domain.com"
+                        formControlName="email">
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="w-100">
+                    <mat-label>Password</mat-label>
+                    <input type="password" matInput placeholder="your password"
+                        formControlName="password">
+                </mat-form-field>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <mat-form-field class="w-100">
+                    <mat-label>Description</mat-label>
+                    <textarea matInput formControlName="description"></textarea>
+                </mat-form-field>
+            </div>
+            <div class="col-md-2"></div>
+        </div>
+        <div class="text-center">
+            <button mat-raised-button color="primary"
+                (click)="updateMusical()">Save information</button>
+        </div>
+    </form>
+</div>

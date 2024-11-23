@@ -1,0 +1,122 @@
+/* Contenedor Principal */
+.container {
+  background-color: #1A1A2E; /* Fondo oscuro elegante */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  color: #FFFFFF; /* Texto blanco */
+}
+
+/* Título */
+h1, h2, h3 {
+  color: #FFD700; /* Dorado para profesionalismo */
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Botones */
+button[mat-raised-button] {
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: 10px 20px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button[mat-raised-button]:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+button[mat-raised-button][color="primary"] {
+  background: #6C63FF; /* Morado intenso */
+  color: #FFFFFF; /* Texto blanco */
+}
+
+button[mat-raised-button][color="primary"]:hover {
+  background: #4A4CD1; /* Morado más oscuro */
+}
+
+button.me-2 {
+  background: #FFD700; /* Dorado */
+  color: #1A1A2E; /* Texto oscuro */
+}
+
+button.me-2:hover {
+  background: #FFC107; /* Amarillo vibrante */
+}
+
+/* Imagen Principal */
+img {
+  border-radius: 10px;
+  border: 3px solid #FFD700; /* Borde dorado */
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Comentarios */
+.shadow-sm {
+  background: #222437; /* Fondo oscuro para comentarios */
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-sm p {
+  color: #FFFFFF; /* Texto blanco */
+}
+
+.shadow-sm img {
+  border-radius: 50%;
+  border: 2px solid #6C63FF; /* Borde morado */
+  box-shadow: 0 2px 8px rgba(108, 99, 255, 0.5);
+}
+
+/* Estilo de las estrellas */
+mat-icon {
+  font-size: 28px;
+  color: rgb(255, 140, 55); /* Color inicial */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+mat-icon[color="warn"] {
+  color: #FFD700; /* Dorado para estrellas activas */
+}
+
+mat-icon:hover {
+  transform: scale(1.2); /* Aumentar tamaño al pasar el cursor */
+}
+
+/* Campo de texto */
+textarea {
+  background: rgba(255, 255, 255, 0.11); /* Fondo oscuro */
+  color: rgba(255, 255, 255, 0.09); /* Texto blanco */
+  border-radius: 5px;
+  border: 1px solid #6C63FF; /* Borde morado */
+  padding: 10px;
+}
+
+textarea::placeholder {
+  color: #888; /* Placeholder gris */
+}
+
+/* Lista de miembros */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+ul li {
+  margin: 5px 0;
+  color: #FFFFFF; /* Texto blanco */
+  padding: 5px;
+  border-radius: 5px;
+  background: #2E2E4E; /* Fondo oscuro suave */
+}
+
+ul li:hover {
+  background: #6C63FF; /* Morado en hover */
+  color: #FFFFFF;
+}
